@@ -41,7 +41,7 @@ public class BodegaService {
                 .anada(2021)
                 .nombre("Vinooooooo")
                 .nombreUva("Pinot Gris")
-                .notaDeCataBodega("Es un vino chistosito")
+                .notaDeCataBodega("Es un vino muy dulce.")
                 .precioARS(4000)
                 .porcentajeComposicionVarietal(80)
                 .build());
