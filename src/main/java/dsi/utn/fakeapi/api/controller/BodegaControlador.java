@@ -20,7 +20,7 @@ public class BodegaControlador {
     @Autowired
     private final BodegaService bodegaService;
 
-    @GetMapping("/{nombre}")
+    //@GetMapping("/{nombre}")
     public ResponseEntity<VinoDataHolder[]> traerNovedades(@PathVariable String nombre) {
         if (Objects.equals(nombre, "BodegaMar")) {
             System.out.println("xd");
@@ -33,4 +33,21 @@ public class BodegaControlador {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("bodegagenial.com/api/")
+    public ResponseEntity<VinoDataHolder[]> traerBodegaGenial() {
+        return traerNovedades("BodegaGenial");
+    }
+
+    @GetMapping("bodegamar.com/api/")
+    public ResponseEntity<VinoDataHolder[]> traerBodegaMar(){
+        return traerNovedades("BodegaMar");
+    }
+
+    @GetMapping("bodegamontana.com/api/")
+    public ResponseEntity<String> traerBodegaMontana(){
+        return ResponseEntity.ok("No hay datos todavia vuelva pronto");
+    }
+
+
 }
