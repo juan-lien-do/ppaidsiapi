@@ -23,13 +23,13 @@ public class BodegaControlador {
     //@GetMapping("/{nombre}")
     public ResponseEntity<VinoDataHolder[]> traerNovedades(@PathVariable String nombre) {
         if (Objects.equals(nombre, "BodegaMar")) {
-            System.out.println("xd");
+            System.out.println("BodegaMar");
             return ResponseEntity.ok(bodegaService.getVinosBodegaMar());
         } else if (Objects.equals(nombre, "BodegaGenial")) {
-            System.out.println("lol");
+            System.out.println("BodegaGenial");
             return ResponseEntity.ok(bodegaService.getVinosBodegaGenial());
         } else {
-            System.out.println("lmao");
+            System.out.println("error");
             return ResponseEntity.badRequest().build();
         }
     }
