@@ -21,7 +21,7 @@ public class BodegaControlador {
     private final BodegaService bodegaService;
 
     //@GetMapping("/{nombre}")
-    public ResponseEntity<VinoDataHolder[]> traerNovedades(@PathVariable String nombre) {
+    public ResponseEntity<VinoDataHolder[]> traerNovedades(String nombre) {
         if (Objects.equals(nombre, "BodegaMar")) {
             System.out.println("BodegaMar");
             return ResponseEntity.ok(bodegaService.getVinosBodegaMar());
